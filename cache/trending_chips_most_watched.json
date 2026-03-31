@@ -1,0 +1,21 @@
+{
+    "mtime": 1774938646,
+    "max": 50,
+    "chips": [
+        "Action",
+        "Drama",
+        "Adventure",
+        "Comedy",
+        "Thriller",
+        "War",
+        "Animation",
+        "Family",
+        "Sci-fi",
+        "Fantasy",
+        "Biography",
+        "Horror",
+        "Romance",
+        "Science Fiction",
+        "Crime"
+    ]
+}

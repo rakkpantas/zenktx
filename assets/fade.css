@@ -1,0 +1,429 @@
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+
+/* Clean Transparent Logo Style */
+.site-logo img,
+.admin-logo img,
+.logo img {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* === Mobile Logo Center Fix === */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .logo {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* === Final Stable Poster Zoom Fix === */
+.movie-card,
+.tv-card {
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.movie-card:hover,
+.tv-card:hover {
+    transform: none !important;
+}
+
+.movie-card img,
+.tv-card img {
+    transition: transform 0.35s ease;
+}
+
+.movie-card:hover img,
+.tv-card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ===== Top Navigation Search ===== */
+.nav-search {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.nav-search form {
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.08);
+    border-radius: 30px;
+    padding: 4px 8px;
+    backdrop-filter: blur(8px);
+}
+
+.nav-search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 14px;
+    width: 180px;
+}
+
+.nav-search input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.nav-search button {
+    background: #e50914;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.nav-search button:hover {
+    background: #ff2c2c;
+}
+
+
+/* ================================ */
+/* ANDROID TV DROPDOWN FIX */
+/* ================================ */
+.watch-player {
+    overflow: visible !important;
+}
+
+/* ================================ */
+/* TV 5 GRID FIX */
+/* ================================ */
+@media screen and (min-width: 1600px) {
+    .content-grid {
+        grid-template-columns: repeat(5, 1fr) !important;
+    }
+}
+
+/* ================================ */
+/* TV HAMBURGER FIX */
+/* ================================ */
+@media (min-width: 769px) and (hover: none) and (pointer: coarse) {
+    .mobile-menu-toggle {
+        display: flex !important;
+    }
+
+    .hamburger-line {
+        background-color: #ffffff !important;
+    }
+}
+
+/* ================================ */
+/* MOBILE PLATFORM 2 CARDS FIX */
+/* ================================ */
+@media (max-width: 620px) {
+    .platform-logos {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px;
+    }
+}
+
+/* ================================ */
+/* MOVIE CARD GLOW HIGHLIGHT */
+/* ================================ */
+.movie-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #1e1e2f;
+    transition: all 0.3s ease;
+}
+
+.movie-card::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(135deg, #ff4ecd, #6c5ce7, #00d4ff);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.movie-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(255, 78, 205, 0.25);
+}
+
+
+
+/* ================================ */
+/* NAV SEARCH BUTTON NO-JUMP FIX */
+/* Prevents search button from dropping on hover/focus */
+/* ================================ */
+.nav-search {
+  display: flex !important;
+  align-items: center !important;
+  position: relative !important;
+}
+
+.nav-search input {
+  height: 44px !important;
+  padding: 0 55px 0 18px !important;
+  border-radius: 30px !important;
+  border: 2px solid transparent !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+  transition: border 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+/* IMPORTANT: do not change padding/height on focus */
+.nav-search input:focus {
+  border: 2px solid #ff3d3d !important;
+  box-shadow: 0 0 8px rgba(255,61,61,0.4) !important;
+}
+
+.nav-search button,
+.nav-search .search-btn,
+.nav-search .nav-search-btn {
+  position: absolute !important;
+  right: 4px !important;
+  height: 36px !important;
+  width: 36px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transform: none !important;
+  top: 50% !important;
+  margin: 0 !important;
+  translate: 0 -50% !important; /* modern centering */
+}
+
+/* fallback for browsers without translate */
+@supports not (translate: 0 -50%) {
+  .nav-search button,
+  .nav-search .search-btn,
+  .nav-search .nav-search-btn {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+}
+
+.nav-search button:hover,
+.nav-search .search-btn:hover,
+.nav-search .nav-search-btn:hover {
+  transform: none !important;
+}
+
+
+/* ================================ */
+/* SEARCH BORDER PERFECT ALIGN FIX */
+/* ================================ */
+
+.nav-search {
+  display: flex !important;
+  align-items: center !important;
+  position: relative !important;
+  border: 2px solid transparent !important;
+  border-radius: 30px !important;
+  background: rgba(255,255,255,0.08) !important;
+  height: 44px !important;
+  padding: 0 6px 0 14px !important;
+  transition: border 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.nav-search:focus-within {
+  border: 2px solid #ff2d2d !important;
+  box-shadow: 0 0 12px rgba(255,45,45,0.4) !important;
+}
+
+.nav-search input {
+  flex: 1 !important;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  height: 100% !important;
+}
+
+.nav-search button,
+.nav-search .search-btn,
+.nav-search .nav-search-btn {
+  height: 34px !important;
+  width: 34px !important;
+  border-radius: 50% !important;
+  border: none !important;
+  background: #ff2d2d !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+}
+
+
+
+/* ================================ */
+/* FIX: REMOVE DOUBLE BORDER ON SEARCH */
+/* Older patches may add input:focus border/box-shadow. Force remove. */
+/* ================================ */
+.nav-search input:focus,
+.nav-search input:focus-visible {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* If any outline is applied to the wrapper by browser, normalize */
+.nav-search:focus,
+.nav-search:focus-visible {
+  outline: none !important;
+}
+
+
+/* ================================ */
+/* FIX: REMOVE RING/SHADOW AROUND SEARCH BUTTON */
+/* Android/TV can show double lines because of hover/focus shadows */
+/* ================================ */
+.nav-search button,
+.nav-search .search-btn,
+.nav-search .nav-search-btn {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.nav-search button:hover,
+.nav-search button:active,
+.nav-search button:focus,
+.nav-search button:focus-visible,
+.nav-search .search-btn:hover,
+.nav-search .search-btn:active,
+.nav-search .search-btn:focus,
+.nav-search .search-btn:focus-visible,
+.nav-search .nav-search-btn:hover,
+.nav-search .nav-search-btn:active,
+.nav-search .nav-search-btn:focus,
+.nav-search .nav-search-btn:focus-visible {
+  box-shadow: none !important;
+  outline: none !important;
+  transform: none !important;
+}
+
+
+/* ================================ */
+/* FINAL FIX: NAV SEARCH DOUBLE BORDER/RING (FORM-BASED) */
+/* The markup uses .nav-search > form, so style the FORM as the pill wrapper. */
+/* ================================ */
+
+/* Neutralize outer container so only one wrapper is styled */
+.nav-search {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  height: auto !important;
+  box-shadow: none !important;
+}
+
+/* Make the FORM the single pill wrapper */
+.nav-search form {
+  display: flex !important;
+  align-items: center !important;
+  position: relative !important;
+  height: 44px !important;
+
+  background: rgba(255,255,255,0.08) !important;
+  border: 2px solid transparent !important;
+  border-radius: 30px !important;
+
+  padding: 0 6px 0 14px !important;
+  box-sizing: border-box !important;
+
+  transition: border 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.nav-search form:focus-within {
+  border-color: #ff2d2d !important;
+  box-shadow: 0 0 12px rgba(255,45,45,0.4) !important;
+}
+
+/* Input should never draw its own border/outline */
+.nav-search input,
+.nav-search form input {
+  flex: 1 !important;
+  height: 100% !important;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #fff !important;
+}
+
+.nav-search input:focus,
+.nav-search input:focus-visible,
+.nav-search form input:focus,
+.nav-search form input:focus-visible {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Button: perfect circle, no ring/shadow */
+.nav-search button,
+.nav-search form button {
+  height: 34px !important;
+  width: 34px !important;
+  border-radius: 50% !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: #ff2d2d !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+.nav-search button:hover,
+.nav-search button:active,
+.nav-search button:focus,
+.nav-search button:focus-visible,
+.nav-search form button:hover,
+.nav-search form button:active,
+.nav-search form button:focus,
+.nav-search form button:focus-visible {
+  box-shadow: none !important;
+  outline: none !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+/* If older CSS sets rounded pill button, force circle */
+.nav-search button svg,
+.nav-search form button svg {
+  display: block !important;
+}

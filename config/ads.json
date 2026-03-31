@@ -1,0 +1,7 @@
+{
+    "home_after_viewall_movies": "<script>\r\n  atOptions = {\r\n    'key' : 'ac2a4b5ab9810fdbaf11f3f85810f11d',\r\n    'format' : 'iframe',\r\n    'height' : 90,\r\n    'width' : 728,\r\n    'params' : {}\r\n  };\r\n</script>\r\n<script src=\"https://www.highperformanceformat.com/ac2a4b5ab9810fdbaf11f3f85810f11d/invoke.js\"></script>",
+    "home_after_viewall_tv": "<script async=\"async\" data-cfasync=\"false\" src=\"https://pl28745623.effectivegatecpm.com/5fbee706a6d139e4d62c4acf692f63ae/invoke.js\"></script>\r\n<div id=\"container-5fbee706a6d139e4d62c4acf692f63ae\"></div>",
+    "watch_after_related": "<script>\r\n  atOptions = {\r\n    'key' : 'ac2a4b5ab9810fdbaf11f3f85810f11d',\r\n    'format' : 'iframe',\r\n    'height' : 90,\r\n    'width' : 728,\r\n    'params' : {}\r\n  };\r\n</script>\r\n<script src=\"https://www.highperformanceformat.com/ac2a4b5ab9810fdbaf11f3f85810f11d/invoke.js\"></script>",
+    "movie_card_ad_1": "",
+    "movie_card_ad_2": ""
+}
